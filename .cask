@@ -1,0 +1,25 @@
+# Install native apps
+
+brew install phinze/cask/brew-cask
+brew tap caskroom/versions
+
+function installcask() {
+	brew cask install "${@}" 2> /dev/null
+}
+
+installcask alfred
+installcask dropbox
+installcask firefox
+installcask google-chrome
+installcask google-chrome-canary
+installcask imagealpha
+installcask imageoptim
+installcask reveal
+installcask sublime-text
+installcask vlc
+
+# QuickLook plugins
+installcask qlstephen
+installcask qlmarkdown
+
+brew cleanup
