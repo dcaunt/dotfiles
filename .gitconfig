@@ -1,0 +1,15 @@
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+        l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit -n 20
+	up = "!git remote update -p; git merge --ff-only @{u}"
+	st = !git status
+	cl = clone
+	ci = commit
+	co = checkout
+	br = branch 
+	wip = commit -n -a -m 'wip'
+	unwip = reset HEAD~
+	branches = branch -a
+	remotes = remote -v
+[push]
+	default = simple

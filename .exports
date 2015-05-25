@@ -1,0 +1,4 @@
+export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
+
+# Install brew cask apps to root Applications directory
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"

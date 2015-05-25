@@ -1,0 +1,4 @@
+gitcheckoutpull() {
+  g co -b $1 pull/origin/$1  
+}
+alias gp=gitcheckoutpull
