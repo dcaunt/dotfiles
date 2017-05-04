@@ -2,34 +2,37 @@
 
 # Install command-line tools using Homebrew.
 
-# Ask for the administrator password upfront.
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until the script has finished.
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 # Make sure we’re using the latest Homebrew.
 brew update
 
 # Upgrade any already-installed formulae.
-brew upgrade --all
+brew upgrade
 
-brew install git
-brew install bash-completion
-brew install wget
-brew install imagemagick --with-webp
-brew install webp
+# Install GNU core utilities (those that come with macOS are outdated).
+# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
+brew install coreutils
 
+# Install some other useful utilities like `sponge`.
+brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
+# Install GNU `sed`, overwriting the built-in `sed`.
+brew install gnu-sed --with-default-names
 
-# Objective-C / iOS / Xcode
-brew install xctool
-brew install mogenerator
+# Install more recent versions of some macOS tools.
+brew install homebrew/dupes/grep
 
-# Cask
-brew install caskroom/cask/brew-cask
-
-brew cask install --appdir="/Applications" google-chrome
+brew install bash-completion
+brew install diff-so-fancy
+brew install git
+brew install git-lfs
+brew install imagemagick --with-webp
+brew install node
+brew install jq
+brew install mas
+brew install swiftlint
+brew install webp
+brew install wget
+brew install zopfli
 
 brew cleanup
