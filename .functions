@@ -1,5 +1,22 @@
 #!/usr/bin/env bash
 
+function x() {
+  XCWORKSPACE=$(ls -d *.xcworkspace 2>/dev/null | head -n 1)
+  XCODEPROJ=$(ls -d *.xcodeproj 2>/dev/null | head -n 1)
+  if [ -n "$XCWORKSPACE" ]
+  then
+      echo "Opening $XCWORKSPACE"
+      open "$XCWORKSPACE"
+  elif [ -n "$XCODEPROJ" ]
+  then
+    echo "Opening $XCODEPROJ"
+    open "$XCODEPROJ"
+  else
+      echo "*** No workspace or project file found."
+      exit 1
+  fi
+}
+
 # Create a new directory and enter it
 function mkd() {
 	mkdir -p "$@" && cd "$_";
