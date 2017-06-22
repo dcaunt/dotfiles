@@ -2,6 +2,9 @@
 	name = Dave Caunt
 	email = dcaunt@gmail.com
 [alias]
+	patch = !git --no-pager diff --no-color
+	sync = !sh -c 'git checkout --quiet --detach && git fetch origin master:master && git checkout --quiet -'
+	ignored = !git ls-files -v | grep "^[[:lower:]]"
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
         l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit -n 30
 	up = "!git remote update -p; git merge --ff-only @{u}"
@@ -23,3 +26,5 @@
 	helper = osxkeychain
 [merge]
 	tool = opendiff
+	[pager]
+	  diff = diff-so-fancy | less --tabs=4 -RFX --pattern '^(Date|added|deleted|modified): '
