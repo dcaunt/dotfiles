@@ -17,20 +17,22 @@ brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
+brew install gnu-sed
 
 # Install more recent versions of some macOS tools.
 brew install homebrew/dupes/grep
 
 brew install bash-completion
 brew install diff-so-fancy
+brew install fd
 brew install git
 brew install git-lfs
-brew install imagemagick --with-webp
+brew install imagemagick
 brew install node
 brew install jq
 brew install mas
 brew install swiftlint
+brew install the_silver_searcher
 brew install webp
 brew install wget
 brew install zopfli
