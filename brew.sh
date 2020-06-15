@@ -23,6 +23,7 @@ brew install gnu-sed
 brew install homebrew/dupes/grep
 
 brew install bash-completion
+brew install carthage
 brew install diff-so-fancy
 brew install fd
 brew install git
