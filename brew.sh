@@ -1,4 +1,10 @@
-#!/usr/bin/env bash
+#!/bin/sh
+
+# Enable shell script strictness
+set -eu
+
+# Enable command tracing
+set -x
 
 # Install command-line tools using Homebrew.
 
@@ -22,18 +28,21 @@ brew install gnu-sed
 # Install more recent versions of some macOS tools.
 brew install homebrew/dupes/grep
 
-brew install bash-completion
-brew install carthage
-brew install diff-so-fancy
+brew install bat
+brew install brotli
+brew install exa
+brew install exiftool
 brew install fd
+brew install fzf
 brew install git
+brew install git-delta
 brew install git-lfs
 brew install imagemagick
-brew install node
 brew install jq
-brew install mas
+brew install ripgrep
+brew install sqlite
+brew install starship
 brew install swiftlint
-brew install the_silver_searcher
 brew install webp
 brew install wget
 brew install zopfli
