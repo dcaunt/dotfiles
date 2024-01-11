@@ -25,9 +25,6 @@ brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed
 
-# Install more recent versions of some macOS tools.
-brew install homebrew/dupes/grep
-
 brew install bat
 brew install brotli
 brew install exa
@@ -37,6 +34,7 @@ brew install fzf
 brew install git
 brew install git-delta
 brew install git-lfs
+brew install grep
 brew install imagemagick
 brew install jq
 brew install ripgrep
