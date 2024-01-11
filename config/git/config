@@ -48,6 +48,8 @@
 	prune = true
 [help]
 	autoCorrect = 20
+[include]
+	path = ~/.config/git-local-config
 [init]
 	defaultBranch = main
 [interactive]
