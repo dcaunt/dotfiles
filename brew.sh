@@ -27,7 +27,7 @@ brew install gnu-sed
 
 brew install bat
 brew install brotli
-brew install exa
+brew install eza
 brew install exiftool
 brew install fd
 brew install fzf
