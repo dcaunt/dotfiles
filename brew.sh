@@ -39,7 +39,6 @@ brew install imagemagick
 brew install jq
 brew install ripgrep
 brew install sqlite
-brew install starship
 brew install swiftlint
 brew install webp
 brew install wget

@@ -15,7 +15,7 @@
 	unwip = reset HEAD~
 	branches = branch -a
 	remotes = remote -v
-	fixup = "!git log -n 10 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+	fixup = "!git log  ...$(git merge-base main $(git branch --show-current)) --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
 	switch-recent = !git branch --sort=-committerdate --format='%(refname:short)' | fzf --preview='git log --date=relative --color main..{}' | xargs git switch
 	rm-merged = !git branch --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" { print $1 }' | xargs -r git branch -D
 	sync = !git switch main && git pull && git rm-merged
@@ -54,6 +54,8 @@
 	defaultBranch = main
 [interactive]
 	diffFilter = delta --color-o
+[log]
+	follow = true
 [merge]
 	tool = vscode
 	conflictStyle = zdiff3
